@@ -1,0 +1,10 @@
+button {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.primary_button {
+  padding: 0.6rem 1.7rem;
+  cursor: pointer;
+}

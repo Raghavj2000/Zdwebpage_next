@@ -1,0 +1,248 @@
+/* Beginning of home section */
+
+#home {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100lvh;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  position: relative;
+}
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.home_header {
+  font-size: 3rem;
+  color: white;
+  font-weight: 600;
+}
+#heading_span {
+  color: #ff8800;
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.6);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  animation: ripple-animation 1s linear infinite;
+}
+
+@keyframes ripple-animation {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(5);
+    opacity: 0;
+  }
+}
+
+.ripple-wrapper {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ripple-button {
+  position: absolute;
+  border: none;
+  background: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+/* End of home section */
+
+/* Beginning of visualizer section */
+
+#visualizer {
+  background-color: #0f0f0f;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding: 3rem 0;
+  text-align: center;
+}
+.visualizer_heading_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  color: white;
+}
+
+#visualizer h2 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+#visualizer h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #a1a1a1;
+}
+.marquee_container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+}
+.marquee_item {
+  width: 20rem;
+  height: 13rem;
+  background-color: #191a1d;
+  border: 1px solid #707070;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0.2rem;
+  border-radius: 0.3rem;
+}
+.marquee_item img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+/*  End of visualizer section*/
+
+/* Beginning of Immersive section */
+
+#immersive {
+  background-color: #0f0f0f;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding: 3rem 1rem;
+  position: relative;
+  text-align: center;
+}
+#immersive h2 {
+  font-size: 3rem;
+  font-weight: 400;
+  color: white;
+}
+#immersive h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #a1a1a1;
+}
+.radial_background {
+  background: radial-gradient(#fdb63a85, #be892c85, #0f0f0f, #0f0f0f);
+  /* background-color: rgba(0, 0, 0, 0.8); */
+  border-radius: 100%;
+  width: 55rem;
+  height: 20rem;
+  opacity: 0.37;
+  top: -3rem;
+  z-index: 0;
+  position: absolute;
+  filter: blur(20px);
+}
+.immersive_image_container {
+  margin-top: 7rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.immersive_card {
+  width: 100%;
+  height: 20rem;
+  flex: 1;
+  background-color: #191818;
+  border-radius: 0.5rem;
+  border: 1px solid #707070;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.immersive_card img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: transform 0.5s ease;
+}
+.immersive_card img:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s ease;
+}
+.immersive_card:nth-child(2) {
+  flex: 1.5;
+  height: 30rem;
+}
+
+.immersive_card:nth-child(2) img {
+  width: 35rem;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+.view_work {
+  width: 100%;
+  border-bottom: 1px solid #707070;
+  margin-top: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding-bottom: 0.5rem;
+}
+#immersive .view_work h3 {
+  color: white;
+}
+.view_work img {
+  width: 1.5rem;
+  height: 1.5rem;
+  animation: moveToAndFro 1.5s infinite linear;
+}
+@keyframes moveToAndFro {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+/* End of Immersive section */

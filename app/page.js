@@ -92,9 +92,8 @@ export default function Home() {
       <section id="visualizer">
         <div className="visualizer_heading_container">
           <motion.h2
-            initial={{ x: -100, opacity: 0 }}
-            // whileInView={{ opacity: 1 }}
-            animate={{ x: 0, opacity: 1 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             transition={{ type: "spring", stiffness: 100 }}
           >
             3D Visualizer

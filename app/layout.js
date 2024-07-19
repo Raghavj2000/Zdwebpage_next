@@ -1,6 +1,7 @@
 import { Roboto } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const openSans = Roboto({
   subsets: ["latin"],
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
       <body className={openSans.className}>
         <Navbar />
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );

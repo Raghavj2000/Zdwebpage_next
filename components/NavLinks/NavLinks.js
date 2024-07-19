@@ -16,7 +16,9 @@ const NavLinks = ({ links, key }) => {
           "linear-gradient(to bottom, #f2a751, #7b4303)",
       }}
     >
-      <Link href={links.href}> {links.title} </Link>
+      <Link href={links.href} title={links.title}>
+        {links.title}
+      </Link>
     </div>
   );
 };

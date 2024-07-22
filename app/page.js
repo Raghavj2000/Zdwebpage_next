@@ -226,7 +226,7 @@ export default function Home() {
           </div>
           <div className="immersive_card">
             <Image src={elephant} alt="hourglass" priority title="elephant" />
-            {/*  TODO: the next step i..e it has to open model in a  new page */}
+            {/*  TODO: the next step i..e it has to open model in a  new page yes */}
             <PrimaryButton
               label="Explore"
               role="button"

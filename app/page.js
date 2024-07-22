@@ -1,7 +1,7 @@
 "use client";
 
 // import { useState, useEffect } from "react";
-import PrimaryButton from "@/components/PrimaryButton/PrimaryButton";
+import PrimaryButton from "../components/PrimaryButton/PrimaryButton";
 import hourGlass from "@/public/hourglass.png";
 import flowerPot from "@/public/flower_pot.png";
 import woodenSofa from "@/public/wooden_Sofa.png";
@@ -307,10 +307,11 @@ export default function Home() {
           <div className="top_right_box"></div>
           <div className="bottom_left_box"></div>
           <div className="bottom_right_box"></div>
-          {journeyArr.map((item, index) => {
+          {journeyArr.map((item) => {
             return (
               <>
                 <article className="journey_card" key={item.id}>
+                  {/* TODO : ADD LINES IN BETWEEN BOXES */}
                   <div className="journey_image_container">
                     <Image src={item.image} />
                   </div>

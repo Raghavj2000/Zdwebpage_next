@@ -293,7 +293,7 @@ export default function Home() {
       </section>
       <section id="journey_container">
         {/* Add Radial Background after coding journey card */}
-        <h3>We've Got You Covered Throughout Your Journey</h3>
+        <h3>We&apos;ve Got You Covered Throughout Your Journey</h3>
         <RadialBackground
           style={{
             width: "45rem",

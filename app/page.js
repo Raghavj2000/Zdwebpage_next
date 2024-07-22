@@ -12,6 +12,9 @@ import Marquee from "react-fast-marquee";
 import rightIcon from "@/public/image.png";
 import potIcon from "@/public/pot.png";
 import rockingChair from "@/public/rockingchair2.png";
+import visualize from "@/public/visualize.png";
+import upload from "@/public/Upload.png";
+import generate from "@/public/generate.png";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import "./home.css";
@@ -77,6 +80,30 @@ export default function Home() {
       descprition:
         "Tailoring your product, content, or services based on your and your customer's preference",
       image: potIcon,
+    },
+  ];
+
+  const journeyArr = [
+    {
+      id: 1,
+      title: "Visualize The 3D Model",
+      descprition:
+        "Bring your 3D models to life with our dynamic visualization feature, complete with stunning animations and the ability to swap colors in real-time.",
+      image: visualize,
+    },
+    {
+      id: 2,
+      title: "Upload 3D Model",
+      descprition:
+        "Seamlessly upload your 3D models into our system with our platform’s easy upload, preview, and editing capabilities for hassle-free management and deployment.",
+      image: upload,
+    },
+    {
+      id: 3,
+      title: "Generate 3D Model",
+      descprition:
+        "If you do not have 3D models, let our skilled ZE team create your 3D model in .GLB format, based on your CAD file or high-resolution images with a tech pack. If you already have 3D models, you can skip this step entirely.",
+      image: generate,
     },
   ];
 
@@ -243,9 +270,9 @@ export default function Home() {
         />
 
         <div className="capabilities_container">
-          {capabiltiesArr.map((item, index) => {
+          {capabiltiesArr.map((item) => {
             return (
-              <div className="capabilities_card" key={item.id}>
+              <article className="capabilities_card" key={item.id}>
                 <div className="capabilities_text_section">
                   <h3>{item.number}</h3>
                   <h4>{item.title}</h4>
@@ -259,34 +286,41 @@ export default function Home() {
                     title="Hourglass"
                   />
                 </div>
-              </div>
+              </article>
             );
           })}
-          {/* <div className="capabilities_card">
-            <div className="capabilities_text_section">
-              <h3>03</h3>
-              <h4>Omni-Channel Adoption</h4>
-              <p>
-                Embed product configurators on your website to allow potential
-                buyers to interact with and customize products, boosting
-                engagement and conversion rates. Embed interactive configurators
-                on social media platforms, Partnerships and Third-Party Websites
-                and share links via Email Campaigns to reach potential buyers
-                and leverage high engagement rates Integrate product
-                configurators into mobile apps to provide a seamless and
-                personalized user experience, enhancing customer satisfaction
-                and loyalty.
-              </p>
-            </div>
-            <div className="capabilities_image_section">
-              <Image
-                src={hourGlass}
-                alt="hourglass"
-                priority
-                title="Hourglass"
-              />
-            </div>
-          </div> */}
+        </div>
+      </section>
+      <section id="journey_container">
+        {/* Add Radial Background after coding journey card */}
+        <h3>We've Got You Covered Throughout Your Journey</h3>
+        <RadialBackground
+          style={{
+            width: "45rem",
+            height: "25rem",
+            top: "-3.5rem",
+          }}
+        />
+
+        <div className="journey_card_container">
+          <div className="top_left_box"></div>
+          <div className="top_right_box"></div>
+          <div className="bottom_left_box"></div>
+          <div className="bottom_right_box"></div>
+          {journeyArr.map((item, index) => {
+            return (
+              <>
+                <article className="journey_card" key={item.id}>
+                  <div className="journey_image_container">
+                    <Image src={item.image} />
+                  </div>
+
+                  <h3>{item.title}</h3>
+                  <p>{item.descprition}</p>
+                </article>
+              </>
+            );
+          })}
         </div>
       </section>
     </main>

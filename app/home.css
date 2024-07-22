@@ -331,5 +331,102 @@ video {
   object-fit: cover;
 }
 /* End of Image Container */
-
 /* End of Capabilities section */
+
+/* Beginning of Journey Container */
+
+#journey_container {
+  background-color: #0f0f0f;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding: 3rem 4rem;
+  position: relative;
+  text-align: center;
+}
+#journey_container h3 {
+  color: white;
+  font-size: 2rem;
+  font-weight: 400;
+}
+#journey_container .journey_card_container {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin-top: 7rem;
+  position: relative;
+  padding: 2rem 0;
+}
+.journey_card {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.journey_image_container {
+  width: 4rem;
+  height: 4rem;
+}
+.journey_card img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.journey_card p {
+  color: white;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  max-width: 20rem;
+  word-spacing: 1px;
+  line-height: 1.5rem;
+}
+.top_left_box {
+  position: absolute;
+  width: 8rem;
+  height: 8rem;
+  top: 0;
+  left: 0;
+  border-top: 2px solid #e9b171;
+  border-left: 2px solid #e9b171;
+  border-top-left-radius: 1rem;
+}
+.top_right_box {
+  position: absolute;
+  width: 8rem;
+  height: 8rem;
+  border-top: 2px solid #e9b171;
+  border-right: 2px solid #e9b171;
+  border-top-right-radius: 1rem;
+  top: 0;
+  right: 0;
+}
+.bottom_left_box {
+  position: absolute;
+  width: 8rem;
+  height: 8rem;
+  border-bottom: 2px solid #e9b171;
+  border-left: 2px solid #e9b171;
+  border-bottom-left-radius: 1rem;
+  bottom: 0;
+  left: 0;
+}
+.bottom_right_box {
+  position: absolute;
+  width: 8rem;
+  height: 8rem;
+  border-bottom: 2px solid #e9b171;
+  border-right: 2px solid #e9b171;
+  border-bottom-right-radius: 1rem;
+  bottom: 0;
+  right: 0;
+}
+
+/* End of Journey Container */

@@ -1,7 +1,7 @@
 "use client";
 
 // import { useState, useEffect } from "react";
-import PrimaryButton from "@/components/primaryButton/PrimaryButton";
+import PrimaryButton from "@/components/PrimaryButton/PrimaryButton";
 import hourGlass from "@/public/hourglass.png";
 import flowerPot from "@/public/flower_pot.png";
 import woodenSofa from "@/public/wooden_Sofa.png";
@@ -9,10 +9,13 @@ import woodenChair from "@/public/woodenChair.png";
 import tyre from "@/public/tire.png";
 import elephant from "@/public/elephant.png";
 import Marquee from "react-fast-marquee";
-import rightIcon from "@/public/right-icon.png";
+import rightIcon from "@/public/image.png";
+import potIcon from "@/public/pot.png";
+import rockingChair from "@/public/rockingchair2.png";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import "./home.css";
+import RadialBackground from "@/components/RadialBackground/RadialBackground";
 
 export default function Home() {
   // const [ripplePosition, setRipplePosition] = useState({ x: -100, y: -100 });
@@ -46,6 +49,34 @@ export default function Home() {
       id: 4,
       title: "Wooden Chair",
       logo: woodenChair,
+    },
+  ];
+
+  const capabiltiesArr = [
+    {
+      id: 1,
+      number: "01",
+      title: "Omni-Channel Adoption",
+      descprition:
+        "Embed product configurators on your website to allow potential buyers to interact with and customize products, boosting engagement and conversion rates. Embed interactive configurators on social media platforms, Partnerships and Third-Party Websites and share links via Email Campaigns to reach potential buyers and leverage high engagement rates Integrate product configurators into mobile apps to provide a seamless and personalized user experience, enhancing customer satisfaction and loyalty.",
+      image: hourGlass,
+    },
+    {
+      id: 2,
+      number: "02",
+      title: "Easy Integration",
+      descprition:
+        "Easily integrate the ZD viewer by copying the embed code, pasting it into your website's HTML, and publishing Easily integrate the ZD viewer by copying the iframe link, pasting it into your website's HTML, adjusting attributes, and publishing your page.",
+      image: rockingChair,
+    },
+
+    {
+      id: 3,
+      number: "03",
+      title: "Personalisation",
+      descprition:
+        "Tailoring your product, content, or services based on your and your customer's preference",
+      image: potIcon,
     },
   ];
 
@@ -144,7 +175,14 @@ export default function Home() {
           Immersive Experience Leads To <br />
           Tangible Outcomes
         </h2>
-        <div className="radial_background"></div>
+
+        <RadialBackground
+          style={{
+            width: "55rem",
+            height: "20rem",
+            top: "-3rem",
+          }}
+        />
         <div className="immersive_image_container">
           <div className="immersive_card">
             <Image src={hourGlass} alt="hourglass" priority title="Hourglass" />
@@ -190,6 +228,65 @@ export default function Home() {
           {/*  TODO: the next step i..e it has to open something in a  new page */}
           <h3>View Our Work</h3>
           <Image src={rightIcon} alt="right" />
+        </div>
+      </section>
+      <section id="capabilities">
+        <h2>
+          <span id="heading_span">ZD Viewer</span> Capabilities
+        </h2>
+        <RadialBackground
+          style={{
+            width: "50rem",
+            height: "20rem",
+            top: "-5rem",
+          }}
+        />
+
+        <div className="capabilities_container">
+          {capabiltiesArr.map((item, index) => {
+            return (
+              <div className="capabilities_card" key={item.id}>
+                <div className="capabilities_text_section">
+                  <h3>{item.number}</h3>
+                  <h4>{item.title}</h4>
+                  <p>{item.descprition}</p>
+                </div>
+                <div className="capabilities_image_section">
+                  <Image
+                    src={item.image}
+                    alt="hourglass"
+                    priority
+                    title="Hourglass"
+                  />
+                </div>
+              </div>
+            );
+          })}
+          {/* <div className="capabilities_card">
+            <div className="capabilities_text_section">
+              <h3>03</h3>
+              <h4>Omni-Channel Adoption</h4>
+              <p>
+                Embed product configurators on your website to allow potential
+                buyers to interact with and customize products, boosting
+                engagement and conversion rates. Embed interactive configurators
+                on social media platforms, Partnerships and Third-Party Websites
+                and share links via Email Campaigns to reach potential buyers
+                and leverage high engagement rates Integrate product
+                configurators into mobile apps to provide a seamless and
+                personalized user experience, enhancing customer satisfaction
+                and loyalty.
+              </p>
+            </div>
+            <div className="capabilities_image_section">
+              <Image
+                src={hourGlass}
+                alt="hourglass"
+                priority
+                title="Hourglass"
+              />
+            </div>
+          </div> */}
         </div>
       </section>
     </main>

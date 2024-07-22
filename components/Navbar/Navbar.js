@@ -3,7 +3,7 @@ import Image from "next/image";
 import "./navbar.css";
 import Logo from "../../public/navLogo.png";
 import Link from "next/link";
-import PrimaryButton from "../primaryButton/PrimaryButton";
+import PrimaryButton from "../PrimaryButton/PrimaryButton";
 import NavLinks from "../NavLinks/NavLinks";
 
 const Navbar = () => {

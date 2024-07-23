@@ -292,13 +292,12 @@ export default function Home() {
         </div>
       </section>
       <section id="journey_container">
-        {/* Add Radial Background after coding journey card */}
         <h3>We&apos;ve Got You Covered Throughout Your Journey</h3>
         <RadialBackground
           style={{
             width: "45rem",
-            height: "25rem",
-            top: "-3.5rem",
+            height: "20rem",
+            top: "-4rem",
           }}
         />
 
@@ -323,6 +322,39 @@ export default function Home() {
             );
           })}
         </div>
+      </section>
+      <section
+        id="transform"
+        // onMouseMove={handleMouseMove}
+      >
+        {/* <span
+          className="ripple"
+          style={{
+            left: ripplePosition.x,
+            top: ripplePosition.y,
+          }}
+        ></span> */}
+        {/*  TODO: Add animation */}
+        <video
+          width={240}
+          autoPlay
+          loop
+          muted
+          style={{
+            zIndex: "-1",
+          }}
+        >
+          <source src="/fashion.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <h4>
+          Transform Your Vision Into Reality And Explore The World Of 3D With
+          The Easy-To-Use ZD Viewer. Comprehensive Content Management System
+          (CMS) With The Platform Offers Powerful Analytics, 3D Model Preview,
+          And Easy Editing Capabilities All In One Place. Organize And Showcase
+          Your Products With Ease Using The Sophisticated Catalog Platform.
+          Analysing Views And Hotspot Clicks For Actionable Analytics.
+        </h4>
       </section>
     </main>
   );
